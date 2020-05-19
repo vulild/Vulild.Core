@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8D8EAE07-ACCB-4435-8CE6-BD628AA60B39}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vulild.Core", "src\XlSoft.Core\Vulild.Core.csproj", "{00839CDE-7777-457C-842E-0935506D6141}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vulild.Core", "src\Vulild.Core\Vulild.Core.csproj", "{00839CDE-7777-457C-842E-0935506D6141}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
