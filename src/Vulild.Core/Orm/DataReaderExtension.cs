@@ -4,7 +4,7 @@ using System.Data;
 using System.Reflection;
 using System.Text;
 
-namespace Vulild.Core
+namespace Vulild.Core.Orm
 {
     public static class DataReaderExtension
     {
