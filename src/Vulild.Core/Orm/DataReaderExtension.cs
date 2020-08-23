@@ -22,7 +22,10 @@ namespace Vulild.Core.Orm
                     if (columns.Contains(pi.Name))
                     {
                         var value = dr[pi.Name];
-                        pi.SetValue(t, Convert.ChangeType(value, pi.PropertyType));
+                        if (value != DBNull.Value)
+                        {
+                            pi.SetValue(t, Convert.ChangeType(value, pi.PropertyType));
+                        }
                     }
                 }
                 ts.Add(t);
