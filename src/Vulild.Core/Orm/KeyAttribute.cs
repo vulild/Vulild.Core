@@ -4,8 +4,7 @@ using System.Text;
 
 namespace Vulild.Core.Orm
 {
-    public interface IDbDelete : IDbOpt
+    public class KeyAttribute : Attribute
     {
-        int Delete();
     }
 }

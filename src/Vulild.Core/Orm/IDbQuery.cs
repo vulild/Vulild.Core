@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Vulild.Core.Orm
 {
-    public interface IDbQuery : IDbOpt
+    public interface IDbQuery<T> : IDbOpt
     {
-        string QuerySql();
+        T Query();
     }
 }

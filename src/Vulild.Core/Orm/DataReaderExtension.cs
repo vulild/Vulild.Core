@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
-using System.Text;
 
 namespace Vulild.Core.Orm
 {
@@ -19,12 +18,16 @@ namespace Vulild.Core.Orm
                 T t = new T();
                 foreach (var pi in pis)
                 {
-                    if (columns.Contains(pi.Name, StringComparison.CurrentCultureIgnoreCase))
+                    foreach (var column in columns)
                     {
-                        var value = dr[pi.Name];
-                        if (value != DBNull.Value)
+                        if (column.Equals(pi.Name, StringComparison.CurrentCultureIgnoreCase))
                         {
-                            pi.SetValue(t, value);
+                            var value = dr[pi.Name];
+                            if (value != DBNull.Value)
+                            {
+                                pi.SetValue(t, value);
+                            }
+                            break;
                         }
                     }
                 }

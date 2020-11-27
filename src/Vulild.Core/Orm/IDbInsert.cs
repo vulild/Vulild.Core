@@ -6,6 +6,6 @@ namespace Vulild.Core.Orm
 {
     public interface IDbInsert : IDbOpt
     {
-        bool Insert();
+        int Insert();
     }
 }

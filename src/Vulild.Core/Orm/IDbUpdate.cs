@@ -6,5 +6,6 @@ namespace Vulild.Core.Orm
 {
     public interface IDbUpdate : IDbOpt
     {
+        int Update();
     }
 }
