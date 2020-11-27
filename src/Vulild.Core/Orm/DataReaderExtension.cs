@@ -19,12 +19,12 @@ namespace Vulild.Core.Orm
                 T t = new T();
                 foreach (var pi in pis)
                 {
-                    if (columns.Contains(pi.Name))
+                    if (columns.Contains(pi.Name, StringComparison.CurrentCultureIgnoreCase))
                     {
                         var value = dr[pi.Name];
                         if (value != DBNull.Value)
                         {
-                            pi.SetValue(t, Convert.ChangeType(value, pi.PropertyType));
+                            pi.SetValue(t, value);
                         }
                     }
                 }
