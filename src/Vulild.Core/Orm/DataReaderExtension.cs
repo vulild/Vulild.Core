@@ -12,20 +12,20 @@ namespace Vulild.Core.Orm
             List<T> ts = new List<T>();
             Type type = typeof(T);
             List<string> columns = dr.GetColumns();
-            PropertyInfo[] pis = type.GetProperties();
+            FieldInfo[] fis = type.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
             while (dr.Read())
             {
                 T t = new T();
-                foreach (var pi in pis)
+                foreach (var fi in fis)
                 {
                     foreach (var column in columns)
                     {
-                        if (column.Equals(pi.Name, StringComparison.CurrentCultureIgnoreCase))
+                        if (column.Equals(fi.Name, StringComparison.CurrentCultureIgnoreCase))
                         {
-                            var value = dr[pi.Name];
+                            var value = dr[fi.Name];
                             if (value != DBNull.Value)
                             {
-                                pi.SetValue(t, value);
+                                fi.SetValue(t, value);
                             }
                             break;
                         }
