@@ -39,11 +39,14 @@ namespace Vulild.Core.Algorithms
         private object syncRoot = new object();//加锁对象
         static Snowflake snowflake;
 
-        public static Snowflake Instance()
+        public static Snowflake Instance
         {
-            if (snowflake == null)
-                snowflake = new Snowflake();
-            return snowflake;
+            get
+            {
+                if (snowflake == null)
+                    snowflake = new Snowflake();
+                return snowflake;
+            }
         }
 
         public Snowflake()
