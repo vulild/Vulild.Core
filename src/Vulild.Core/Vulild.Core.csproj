@@ -3,11 +3,15 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.1;net45;net5</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>2021.0416.1417.1</AssemblyVersion>
-    <FileVersion>2021.0416.1417.1</FileVersion>
-    <Version>2021.0416.1417.1</Version>
+    <AssemblyVersion>2021.0528.1410.1</AssemblyVersion>
+    <FileVersion>2021.0528.1410.1</FileVersion>
+    <Version>2021.0528.1410.1</Version>
     <RepositoryUrl>https://github.com/vulild/Vulild.Core</RepositoryUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Portable.BouncyCastle" Version="1.8.10" />
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
