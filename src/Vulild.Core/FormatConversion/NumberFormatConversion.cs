@@ -412,6 +412,11 @@ namespace Vulild.Core.FormatConversion
             return Function.ToDateTime(dateNum, 0, DateStyle.Automatism);
         }
 
+        public static DateTime ToDateTime(this long datetimeNum)
+        {
+            return Function.ToDateTime((int)(datetimeNum / 1000000), (int)(datetimeNum % 1000000));
+        }
+
         // <summary>
         /// 按指定日期样式将输入的整型日期转为日期型日期
         /// </summary>
